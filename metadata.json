@@ -1,0 +1,6 @@
+{
+  "name": "AI-Driven Digital Twin Healthcare Monitor",
+  "description": "AI-Driven Digital Twin for Smart Healthcare using Deep Learning and Real-Time Clinical Data Simulation (MIMIC-IV Demo).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

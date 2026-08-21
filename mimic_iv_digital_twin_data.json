@@ -1,0 +1,3637 @@
+{
+  "metadata": {
+    "dataset": "MIMIC-IV Clinical Database Demo 2.2",
+    "purpose": "Processed frontend data for the AI-Driven Digital Twin project",
+    "patients_included": 5,
+    "vital_sampling": "30-minute bins across the selected ICU stay; last observed value in each bin",
+    "simulation_note": "Historical MIMIC-IV observations can be replayed sequentially by the frontend as simulated real-time data.",
+    "model_status": "CNN-BiLSTM integration pending; no fabricated predictions are included.",
+    "null_policy": "null means the parameter was not recorded in that time bin.",
+    "vital_item_mapping": {
+      "220045": {
+        "field": "heart_rate",
+        "label": "Heart Rate",
+        "unit": "bpm"
+      },
+      "220277": {
+        "field": "spo2",
+        "label": "O2 saturation pulseoxymetry",
+        "unit": "%"
+      },
+      "220210": {
+        "field": "respiratory_rate",
+        "label": "Respiratory Rate",
+        "unit": "insp/min"
+      },
+      "220179": {
+        "field": "bp_systolic",
+        "label": "Non Invasive Blood Pressure systolic",
+        "unit": "mmHg"
+      },
+      "220180": {
+        "field": "bp_diastolic",
+        "label": "Non Invasive Blood Pressure diastolic",
+        "unit": "mmHg"
+      },
+      "220181": {
+        "field": "bp_mean",
+        "label": "Non Invasive Blood Pressure mean",
+        "unit": "mmHg"
+      }
+    }
+  },
+  "patients": [
+    {
+      "subject_id": 10039708,
+      "demographics": {
+        "gender": "F",
+        "anchor_age": 46,
+        "anchor_year_group": "2014 - 2016"
+      },
+      "admission": {
+        "hadm_id": 28258130,
+        "admission_type": "EW EMER.",
+        "admission_location": "EMERGENCY ROOM",
+        "discharge_location": "CHRONIC/LONG TERM ACUTE CARE",
+        "insurance": "Other",
+        "marital_status": "SINGLE",
+        "race": "BLACK/AFRICAN AMERICAN",
+        "hospital_expire_flag": 0
+      },
+      "icu_stay": {
+        "stay_id": 33281088,
+        "hadm_id": 28258130,
+        "first_careunit": "Medical/Surgical Intensive Care Unit (MICU/SICU)",
+        "last_careunit": "Medical/Surgical Intensive Care Unit (MICU/SICU)",
+        "intime": "2140-01-23T18:08:00",
+        "outtime": "2140-02-08T22:28:20",
+        "length_of_stay_days": 16.181
+      },
+      "current_vitals": {
+        "heart_rate": 82.0,
+        "spo2": 97.0,
+        "respiratory_rate": 23.0,
+        "bp_systolic": 97.0,
+        "bp_diastolic": 67.0,
+        "bp_mean": 75.0
+      },
+      "vitals_history": [
+        {
+          "timestamp": "2140-01-23T19:00:00",
+          "heart_rate": 81.0,
+          "spo2": 100.0,
+          "respiratory_rate": 30.0,
+          "bp_systolic": 81.0,
+          "bp_diastolic": 43.0,
+          "bp_mean": 51.0
+        },
+        {
+          "timestamp": "2140-01-23T19:30:00",
+          "heart_rate": 73.0,
+          "spo2": 100.0,
+          "respiratory_rate": 14.0,
+          "bp_systolic": 93.0,
+          "bp_diastolic": 47.0,
+          "bp_mean": 54.0
+        },
+        {
+          "timestamp": "2140-01-23T20:00:00",
+          "heart_rate": 90.0,
+          "spo2": 98.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 89.0,
+          "bp_diastolic": 56.0,
+          "bp_mean": 64.0
+        },
+        {
+          "timestamp": "2140-01-23T20:30:00",
+          "heart_rate": 76.0,
+          "spo2": 97.0,
+          "respiratory_rate": 16.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-23T21:00:00",
+          "heart_rate": 65.0,
+          "spo2": 95.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 95.0,
+          "bp_diastolic": 48.0,
+          "bp_mean": 57.0
+        },
+        {
+          "timestamp": "2140-01-23T22:00:00",
+          "heart_rate": 95.0,
+          "spo2": 95.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 80.0,
+          "bp_diastolic": 62.0,
+          "bp_mean": 66.0
+        },
+        {
+          "timestamp": "2140-01-23T23:00:00",
+          "heart_rate": 89.0,
+          "spo2": 97.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 80.0,
+          "bp_diastolic": 49.0,
+          "bp_mean": 57.0
+        },
+        {
+          "timestamp": "2140-01-24T00:00:00",
+          "heart_rate": 95.0,
+          "spo2": 97.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 93.0,
+          "bp_diastolic": 58.0,
+          "bp_mean": 65.0
+        },
+        {
+          "timestamp": "2140-01-24T01:00:00",
+          "heart_rate": 94.0,
+          "spo2": 95.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T01:30:00",
+          "heart_rate": null,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 140.0,
+          "bp_diastolic": 123.0,
+          "bp_mean": 127.0
+        },
+        {
+          "timestamp": "2140-01-24T02:00:00",
+          "heart_rate": 86.0,
+          "spo2": 100.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 90.0,
+          "bp_diastolic": 66.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2140-01-24T03:00:00",
+          "heart_rate": 91.0,
+          "spo2": 98.0,
+          "respiratory_rate": 23.0,
+          "bp_systolic": 95.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 68.0
+        },
+        {
+          "timestamp": "2140-01-24T04:00:00",
+          "heart_rate": 85.0,
+          "spo2": 98.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 62.0,
+          "bp_mean": 71.0
+        },
+        {
+          "timestamp": "2140-01-24T05:00:00",
+          "heart_rate": 77.0,
+          "spo2": 99.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 121.0,
+          "bp_diastolic": 88.0,
+          "bp_mean": 96.0
+        },
+        {
+          "timestamp": "2140-01-24T06:00:00",
+          "heart_rate": 82.0,
+          "spo2": 98.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 83.0,
+          "bp_diastolic": 53.0,
+          "bp_mean": 61.0
+        },
+        {
+          "timestamp": "2140-01-24T07:00:00",
+          "heart_rate": 79.0,
+          "spo2": 97.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 99.0,
+          "bp_diastolic": 72.0,
+          "bp_mean": 77.0
+        },
+        {
+          "timestamp": "2140-01-24T08:00:00",
+          "heart_rate": 73.0,
+          "spo2": 98.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 98.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 72.0
+        },
+        {
+          "timestamp": "2140-01-24T09:00:00",
+          "heart_rate": 73.0,
+          "spo2": 98.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T10:00:00",
+          "heart_rate": 75.0,
+          "spo2": 99.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 89.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-24T11:00:00",
+          "heart_rate": 80.0,
+          "spo2": null,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 98.0,
+          "bp_diastolic": 82.0,
+          "bp_mean": 86.0
+        },
+        {
+          "timestamp": "2140-01-24T12:00:00",
+          "heart_rate": 76.0,
+          "spo2": 97.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 87.0,
+          "bp_diastolic": 72.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-24T13:00:00",
+          "heart_rate": 71.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T13:30:00",
+          "heart_rate": null,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 91.0,
+          "bp_diastolic": 58.0,
+          "bp_mean": 66.0
+        },
+        {
+          "timestamp": "2140-01-24T14:00:00",
+          "heart_rate": 80.0,
+          "spo2": 99.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 84.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2140-01-24T15:00:00",
+          "heart_rate": 91.0,
+          "spo2": 96.0,
+          "respiratory_rate": 17.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 77.0,
+          "bp_mean": 81.0
+        },
+        {
+          "timestamp": "2140-01-24T16:00:00",
+          "heart_rate": 88.0,
+          "spo2": 98.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 89.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 69.0
+        },
+        {
+          "timestamp": "2140-01-24T17:00:00",
+          "heart_rate": 80.0,
+          "spo2": null,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 76.0,
+          "bp_mean": 81.0
+        },
+        {
+          "timestamp": "2140-01-24T18:00:00",
+          "heart_rate": 74.0,
+          "spo2": 97.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 87.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 63.0
+        },
+        {
+          "timestamp": "2140-01-24T19:00:00",
+          "heart_rate": 73.0,
+          "spo2": null,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 87.0,
+          "bp_diastolic": 48.0,
+          "bp_mean": 58.0
+        },
+        {
+          "timestamp": "2140-01-24T19:30:00",
+          "heart_rate": null,
+          "spo2": 94.0,
+          "respiratory_rate": null,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T20:00:00",
+          "heart_rate": 86.0,
+          "spo2": 96.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T21:00:00",
+          "heart_rate": 73.0,
+          "spo2": 97.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T22:00:00",
+          "heart_rate": 67.0,
+          "spo2": 98.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-24T23:00:00",
+          "heart_rate": 66.0,
+          "spo2": 100.0,
+          "respiratory_rate": 17.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-25T00:00:00",
+          "heart_rate": 67.0,
+          "spo2": 100.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-25T01:00:00",
+          "heart_rate": 67.0,
+          "spo2": 100.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": 74.0,
+          "bp_diastolic": 58.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-25T02:00:00",
+          "heart_rate": 75.0,
+          "spo2": 99.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 76.0,
+          "bp_diastolic": 34.0,
+          "bp_mean": 45.0
+        },
+        {
+          "timestamp": "2140-01-25T03:00:00",
+          "heart_rate": 69.0,
+          "spo2": 98.0,
+          "respiratory_rate": 16.0,
+          "bp_systolic": 84.0,
+          "bp_diastolic": 60.0,
+          "bp_mean": 66.0
+        },
+        {
+          "timestamp": "2140-01-25T04:00:00",
+          "heart_rate": 72.0,
+          "spo2": 97.0,
+          "respiratory_rate": 17.0,
+          "bp_systolic": 80.0,
+          "bp_diastolic": 66.0,
+          "bp_mean": 69.0
+        },
+        {
+          "timestamp": "2140-01-25T05:00:00",
+          "heart_rate": 66.0,
+          "spo2": 97.0,
+          "respiratory_rate": 16.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 57.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-25T06:00:00",
+          "heart_rate": 69.0,
+          "spo2": 100.0,
+          "respiratory_rate": 11.0,
+          "bp_systolic": 83.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 64.0
+        },
+        {
+          "timestamp": "2140-01-25T07:00:00",
+          "heart_rate": 66.0,
+          "spo2": 100.0,
+          "respiratory_rate": 9.0,
+          "bp_systolic": 82.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 64.0
+        },
+        {
+          "timestamp": "2140-01-25T08:00:00",
+          "heart_rate": 64.0,
+          "spo2": 97.0,
+          "respiratory_rate": 16.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 66.0
+        },
+        {
+          "timestamp": "2140-01-25T09:00:00",
+          "heart_rate": 71.0,
+          "spo2": 99.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 85.0,
+          "bp_diastolic": 52.0,
+          "bp_mean": 60.0
+        },
+        {
+          "timestamp": "2140-01-25T10:00:00",
+          "heart_rate": 78.0,
+          "spo2": 96.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 87.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2140-01-25T11:00:00",
+          "heart_rate": 78.0,
+          "spo2": 93.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-25T11:30:00",
+          "heart_rate": null,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 111.0,
+          "bp_diastolic": 66.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2140-01-25T12:00:00",
+          "heart_rate": 75.0,
+          "spo2": 96.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 85.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 69.0
+        },
+        {
+          "timestamp": "2140-01-25T13:00:00",
+          "heart_rate": 70.0,
+          "spo2": 90.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": 71.0
+        },
+        {
+          "timestamp": "2140-01-25T14:00:00",
+          "heart_rate": 66.0,
+          "spo2": 92.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 83.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2140-01-25T15:00:00",
+          "heart_rate": 82.0,
+          "spo2": 93.0,
+          "respiratory_rate": 23.0,
+          "bp_systolic": 88.0,
+          "bp_diastolic": 75.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2140-01-25T16:00:00",
+          "heart_rate": 73.0,
+          "spo2": 98.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 95.0,
+          "bp_diastolic": 74.0,
+          "bp_mean": 79.0
+        },
+        {
+          "timestamp": "2140-01-25T17:00:00",
+          "heart_rate": 117.0,
+          "spo2": 89.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": 103.0,
+          "bp_diastolic": 66.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-25T18:00:00",
+          "heart_rate": 94.0,
+          "spo2": 91.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 75.0,
+          "bp_mean": 80.0
+        },
+        {
+          "timestamp": "2140-01-25T19:00:00",
+          "heart_rate": 84.0,
+          "spo2": 91.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": 101.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2140-01-25T20:00:00",
+          "heart_rate": 88.0,
+          "spo2": 93.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 95.0,
+          "bp_diastolic": 70.0,
+          "bp_mean": 76.0
+        },
+        {
+          "timestamp": "2140-01-25T21:00:00",
+          "heart_rate": 83.0,
+          "spo2": 96.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 77.0,
+          "bp_mean": 81.0
+        },
+        {
+          "timestamp": "2140-01-25T22:00:00",
+          "heart_rate": 80.0,
+          "spo2": 97.0,
+          "respiratory_rate": 17.0,
+          "bp_systolic": 98.0,
+          "bp_diastolic": 72.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2140-01-25T23:00:00",
+          "heart_rate": 94.0,
+          "spo2": 94.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 58.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-25T23:30:00",
+          "heart_rate": 89.0,
+          "spo2": 94.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T00:00:00",
+          "heart_rate": 86.0,
+          "spo2": 94.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 91.0,
+          "bp_diastolic": 41.0,
+          "bp_mean": 49.0
+        },
+        {
+          "timestamp": "2140-01-26T01:00:00",
+          "heart_rate": 88.0,
+          "spo2": 94.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 81.0,
+          "bp_mean": 84.0
+        },
+        {
+          "timestamp": "2140-01-26T02:00:00",
+          "heart_rate": 78.0,
+          "spo2": 95.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 74.0
+        },
+        {
+          "timestamp": "2140-01-26T03:00:00",
+          "heart_rate": 89.0,
+          "spo2": 93.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 45.0,
+          "bp_mean": 53.0
+        },
+        {
+          "timestamp": "2140-01-26T04:00:00",
+          "heart_rate": 83.0,
+          "spo2": 96.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 91.0,
+          "bp_diastolic": 61.0,
+          "bp_mean": 68.0
+        },
+        {
+          "timestamp": "2140-01-26T05:00:00",
+          "heart_rate": 83.0,
+          "spo2": 96.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": 90.0,
+          "bp_diastolic": 62.0,
+          "bp_mean": 69.0
+        },
+        {
+          "timestamp": "2140-01-26T06:00:00",
+          "heart_rate": 91.0,
+          "spo2": 97.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 86.0,
+          "bp_diastolic": 72.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-26T07:00:00",
+          "heart_rate": 90.0,
+          "spo2": 96.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 99.0,
+          "bp_diastolic": 68.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-26T08:00:00",
+          "heart_rate": 80.0,
+          "spo2": 94.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 93.0,
+          "bp_diastolic": 62.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2140-01-26T09:00:00",
+          "heart_rate": 88.0,
+          "spo2": 94.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 102.0,
+          "bp_diastolic": 66.0,
+          "bp_mean": 73.0
+        },
+        {
+          "timestamp": "2140-01-26T10:00:00",
+          "heart_rate": 101.0,
+          "spo2": 88.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 102.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-26T11:00:00",
+          "heart_rate": 101.0,
+          "spo2": 94.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 108.0,
+          "bp_diastolic": 76.0,
+          "bp_mean": 83.0
+        },
+        {
+          "timestamp": "2140-01-26T12:00:00",
+          "heart_rate": 100.0,
+          "spo2": 98.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T13:00:00",
+          "heart_rate": 100.0,
+          "spo2": 96.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T14:00:00",
+          "heart_rate": 115.0,
+          "spo2": 93.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T15:00:00",
+          "heart_rate": 103.0,
+          "spo2": 94.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T16:00:00",
+          "heart_rate": 96.0,
+          "spo2": 98.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T17:00:00",
+          "heart_rate": 97.0,
+          "spo2": 98.0,
+          "respiratory_rate": 30.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T18:00:00",
+          "heart_rate": 94.0,
+          "spo2": 96.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T19:00:00",
+          "heart_rate": 101.0,
+          "spo2": 90.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T20:00:00",
+          "heart_rate": 103.0,
+          "spo2": 92.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T21:00:00",
+          "heart_rate": 113.0,
+          "spo2": 98.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T22:00:00",
+          "heart_rate": 108.0,
+          "spo2": 95.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T23:00:00",
+          "heart_rate": 101.0,
+          "spo2": null,
+          "respiratory_rate": 24.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-26T23:30:00",
+          "heart_rate": null,
+          "spo2": 100.0,
+          "respiratory_rate": null,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T00:00:00",
+          "heart_rate": 101.0,
+          "spo2": 100.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T01:00:00",
+          "heart_rate": 103.0,
+          "spo2": 100.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T02:00:00",
+          "heart_rate": 95.0,
+          "spo2": 99.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T03:00:00",
+          "heart_rate": 92.0,
+          "spo2": 100.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T04:00:00",
+          "heart_rate": 92.0,
+          "spo2": 99.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 84.0,
+          "bp_diastolic": 48.0,
+          "bp_mean": 54.0
+        },
+        {
+          "timestamp": "2140-01-27T05:00:00",
+          "heart_rate": 99.0,
+          "spo2": 90.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T06:00:00",
+          "heart_rate": 90.0,
+          "spo2": 95.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T07:00:00",
+          "heart_rate": 91.0,
+          "spo2": 95.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 99.0,
+          "bp_diastolic": 49.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-27T08:00:00",
+          "heart_rate": 91.0,
+          "spo2": 99.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 99.0,
+          "bp_diastolic": 49.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-27T09:00:00",
+          "heart_rate": 95.0,
+          "spo2": 96.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 82.0,
+          "bp_diastolic": 68.0,
+          "bp_mean": 71.0
+        },
+        {
+          "timestamp": "2140-01-27T10:00:00",
+          "heart_rate": 97.0,
+          "spo2": 94.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 74.0,
+          "bp_diastolic": 42.0,
+          "bp_mean": 49.0
+        },
+        {
+          "timestamp": "2140-01-27T11:00:00",
+          "heart_rate": 97.0,
+          "spo2": 91.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": 75.0,
+          "bp_diastolic": 42.0,
+          "bp_mean": 50.0
+        },
+        {
+          "timestamp": "2140-01-27T12:00:00",
+          "heart_rate": 88.0,
+          "spo2": 99.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": 89.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 66.0
+        },
+        {
+          "timestamp": "2140-01-27T13:00:00",
+          "heart_rate": 92.0,
+          "spo2": 99.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 91.0,
+          "bp_diastolic": 55.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-27T14:00:00",
+          "heart_rate": 96.0,
+          "spo2": 97.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T14:30:00",
+          "heart_rate": null,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 147.0,
+          "bp_diastolic": 127.0,
+          "bp_mean": 132.0
+        },
+        {
+          "timestamp": "2140-01-27T15:00:00",
+          "heart_rate": 100.0,
+          "spo2": 98.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 162.0,
+          "bp_diastolic": 127.0,
+          "bp_mean": 136.0
+        },
+        {
+          "timestamp": "2140-01-27T16:00:00",
+          "heart_rate": 94.0,
+          "spo2": 97.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 54.0,
+          "bp_mean": 63.0
+        },
+        {
+          "timestamp": "2140-01-27T17:00:00",
+          "heart_rate": 92.0,
+          "spo2": 96.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 48.0,
+          "bp_mean": 60.0
+        },
+        {
+          "timestamp": "2140-01-27T18:00:00",
+          "heart_rate": 99.0,
+          "spo2": 96.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 96.0,
+          "bp_diastolic": 51.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-27T19:00:00",
+          "heart_rate": 87.0,
+          "spo2": 100.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": 71.0,
+          "bp_diastolic": 55.0,
+          "bp_mean": 59.0
+        },
+        {
+          "timestamp": "2140-01-27T20:00:00",
+          "heart_rate": 83.0,
+          "spo2": 100.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-27T21:00:00",
+          "heart_rate": 83.0,
+          "spo2": 94.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": 84.0,
+          "bp_diastolic": 72.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2140-01-27T22:00:00",
+          "heart_rate": 91.0,
+          "spo2": 94.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 78.0,
+          "bp_diastolic": 61.0,
+          "bp_mean": 64.0
+        },
+        {
+          "timestamp": "2140-01-27T23:00:00",
+          "heart_rate": 91.0,
+          "spo2": 94.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": 74.0,
+          "bp_diastolic": 49.0,
+          "bp_mean": 55.0
+        },
+        {
+          "timestamp": "2140-01-28T00:00:00",
+          "heart_rate": 89.0,
+          "spo2": 96.0,
+          "respiratory_rate": 31.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 56.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2140-01-28T01:00:00",
+          "heart_rate": 91.0,
+          "spo2": 97.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-28T02:00:00",
+          "heart_rate": 87.0,
+          "spo2": 96.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 76.0,
+          "bp_diastolic": 50.0,
+          "bp_mean": 56.0
+        },
+        {
+          "timestamp": "2140-01-28T03:00:00",
+          "heart_rate": 83.0,
+          "spo2": 96.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 75.0,
+          "bp_diastolic": 53.0,
+          "bp_mean": 59.0
+        },
+        {
+          "timestamp": "2140-01-28T04:00:00",
+          "heart_rate": 94.0,
+          "spo2": 94.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 48.0,
+          "bp_mean": 54.0
+        },
+        {
+          "timestamp": "2140-01-28T05:00:00",
+          "heart_rate": 87.0,
+          "spo2": 93.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 83.0,
+          "bp_diastolic": 48.0,
+          "bp_mean": 57.0
+        },
+        {
+          "timestamp": "2140-01-28T06:00:00",
+          "heart_rate": 85.0,
+          "spo2": 94.0,
+          "respiratory_rate": 32.0,
+          "bp_systolic": 73.0,
+          "bp_diastolic": 56.0,
+          "bp_mean": 60.0
+        },
+        {
+          "timestamp": "2140-01-28T07:00:00",
+          "heart_rate": 92.0,
+          "spo2": 95.0,
+          "respiratory_rate": 34.0,
+          "bp_systolic": 129.0,
+          "bp_diastolic": 73.0,
+          "bp_mean": 86.0
+        },
+        {
+          "timestamp": "2140-01-28T08:00:00",
+          "heart_rate": 84.0,
+          "spo2": 96.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2140-01-28T09:00:00",
+          "heart_rate": 83.0,
+          "spo2": 94.0,
+          "respiratory_rate": 33.0,
+          "bp_systolic": 87.0,
+          "bp_diastolic": 52.0,
+          "bp_mean": 56.0
+        },
+        {
+          "timestamp": "2140-01-28T10:00:00",
+          "heart_rate": 83.0,
+          "spo2": 97.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 90.0,
+          "bp_diastolic": 60.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2140-01-28T11:00:00",
+          "heart_rate": 79.0,
+          "spo2": 100.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 70.0,
+          "bp_diastolic": 38.0,
+          "bp_mean": 45.0
+        },
+        {
+          "timestamp": "2140-01-28T12:00:00",
+          "heart_rate": 76.0,
+          "spo2": 100.0,
+          "respiratory_rate": 30.0,
+          "bp_systolic": 74.0,
+          "bp_diastolic": 42.0,
+          "bp_mean": 50.0
+        },
+        {
+          "timestamp": "2140-01-28T13:00:00",
+          "heart_rate": 82.0,
+          "spo2": 98.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": 88.0,
+          "bp_diastolic": 51.0,
+          "bp_mean": 55.0
+        },
+        {
+          "timestamp": "2140-01-28T14:00:00",
+          "heart_rate": 81.0,
+          "spo2": 100.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": 92.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 68.0
+        },
+        {
+          "timestamp": "2140-01-28T15:00:00",
+          "heart_rate": 81.0,
+          "spo2": 99.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 75.0,
+          "bp_diastolic": 46.0,
+          "bp_mean": 54.0
+        },
+        {
+          "timestamp": "2140-01-28T16:00:00",
+          "heart_rate": 80.0,
+          "spo2": 97.0,
+          "respiratory_rate": 27.0,
+          "bp_systolic": 93.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 72.0
+        },
+        {
+          "timestamp": "2140-01-28T17:00:00",
+          "heart_rate": 79.0,
+          "spo2": 97.0,
+          "respiratory_rate": 29.0,
+          "bp_systolic": 78.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2140-01-28T18:00:00",
+          "heart_rate": 85.0,
+          "spo2": 99.0,
+          "respiratory_rate": 37.0,
+          "bp_systolic": 98.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 74.0
+        },
+        {
+          "timestamp": "2140-01-28T18:30:00",
+          "heart_rate": 89.0,
+          "spo2": null,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 79.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 63.0
+        },
+        {
+          "timestamp": "2140-01-28T19:00:00",
+          "heart_rate": 79.0,
+          "spo2": null,
+          "respiratory_rate": 23.0,
+          "bp_systolic": 81.0,
+          "bp_diastolic": 58.0,
+          "bp_mean": 63.0
+        },
+        {
+          "timestamp": "2140-01-28T19:30:00",
+          "heart_rate": 85.0,
+          "spo2": 100.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 89.0,
+          "bp_diastolic": 53.0,
+          "bp_mean": 58.0
+        },
+        {
+          "timestamp": "2140-01-28T20:00:00",
+          "heart_rate": 82.0,
+          "spo2": 100.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 114.0,
+          "bp_diastolic": 77.0,
+          "bp_mean": 84.0
+        },
+        {
+          "timestamp": "2140-01-28T20:30:00",
+          "heart_rate": 76.0,
+          "spo2": 100.0,
+          "respiratory_rate": 23.0,
+          "bp_systolic": 94.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 74.0
+        },
+        {
+          "timestamp": "2140-01-28T21:00:00",
+          "heart_rate": 79.0,
+          "spo2": 100.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 66.0,
+          "bp_diastolic": 46.0,
+          "bp_mean": 50.0
+        },
+        {
+          "timestamp": "2140-01-28T21:30:00",
+          "heart_rate": 78.0,
+          "spo2": 100.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 88.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2140-01-28T22:00:00",
+          "heart_rate": 76.0,
+          "spo2": 100.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 122.0,
+          "bp_diastolic": 96.0,
+          "bp_mean": 103.0
+        },
+        {
+          "timestamp": "2140-01-28T22:30:00",
+          "heart_rate": 75.0,
+          "spo2": 95.0,
+          "respiratory_rate": 25.0,
+          "bp_systolic": 174.0,
+          "bp_diastolic": 117.0,
+          "bp_mean": 126.0
+        },
+        {
+          "timestamp": "2140-01-28T23:00:00",
+          "heart_rate": 75.0,
+          "spo2": 100.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 84.0,
+          "bp_diastolic": 69.0,
+          "bp_mean": 73.0
+        },
+        {
+          "timestamp": "2140-01-28T23:30:00",
+          "heart_rate": 82.0,
+          "spo2": 89.0,
+          "respiratory_rate": 23.0,
+          "bp_systolic": 81.0,
+          "bp_diastolic": 62.0,
+          "bp_mean": 65.0
+        },
+        {
+          "timestamp": "2140-02-08T20:30:00",
+          "heart_rate": null,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 67.0,
+          "bp_mean": 75.0
+        }
+      ],
+      "laboratory_results": [
+        {
+          "timestamp": "2140-02-22T05:43:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 3.9,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-22T05:43:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 93.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-22T05:43:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 4.5,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-22T05:43:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 136.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 4.0,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 91.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 4.6,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 134.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 7.0,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 268.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T04:36:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 9.7,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T16:00:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 8.7,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-23T16:00:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 265.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-23T16:00:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 9.5,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 4.0,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 89.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 3.8,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 134.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 8.5,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 271.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-24T05:04:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 8.8,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 4.1,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 75.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 5.4,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 138.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 8.9,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 312.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-25T05:45:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 9.1,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 2.9,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 61.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 4.6,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 137.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 9.0,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 303.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2140-02-26T04:57:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 9.6,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        }
+      ],
+      "diagnoses": [
+        {
+          "icd_code": "D649",
+          "icd_version": 10,
+          "description": "Anemia, unspecified"
+        },
+        {
+          "icd_code": "N170",
+          "icd_version": 10,
+          "description": "Acute kidney failure with tubular necrosis"
+        },
+        {
+          "icd_code": "J9691",
+          "icd_version": 10,
+          "description": "Respiratory failure, unspecified with hypoxia"
+        },
+        {
+          "icd_code": "I214",
+          "icd_version": 10,
+          "description": "Non-ST elevation (NSTEMI) myocardial infarction"
+        },
+        {
+          "icd_code": "J690",
+          "icd_version": 10,
+          "description": "Pneumonitis due to inhalation of food and vomit"
+        },
+        {
+          "icd_code": "G9340",
+          "icd_version": 10,
+          "description": "Encephalopathy, unspecified"
+        },
+        {
+          "icd_code": "I5021",
+          "icd_version": 10,
+          "description": "Acute systolic (congestive) heart failure"
+        },
+        {
+          "icd_code": "J95851",
+          "icd_version": 10,
+          "description": "Ventilator associated pneumonia"
+        }
+      ],
+      "medications": [
+        {
+          "drug": "Albuterol Inhaler",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-30 16:00:00",
+          "dose": "1-2",
+          "dose_unit": "PUFF",
+          "route": "IH"
+        },
+        {
+          "drug": "Potassium Chloride",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-02-11 16:00:00",
+          "dose": "40",
+          "dose_unit": "mEq",
+          "route": "IV"
+        },
+        {
+          "drug": "Lactated Ringers",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-24 07:00:00",
+          "dose": "1000",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "Sterile Water",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-23 22:00:00",
+          "dose": "100",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "NS",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-28 12:00:00",
+          "dose": "100",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "0.9% Sodium Chloride",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-31 15:00:00",
+          "dose": "1",
+          "dose_unit": "BAG",
+          "route": "IV"
+        },
+        {
+          "drug": "Iso-Osmotic Dextrose",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-24 09:00:00",
+          "dose": "200",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "CefePIME",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-24 07:00:00",
+          "dose": "1",
+          "dose_unit": "g",
+          "route": "IV"
+        },
+        {
+          "drug": "Vancomycin",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-01-24 09:00:00",
+          "dose": "1000",
+          "dose_unit": "mg",
+          "route": "IV"
+        },
+        {
+          "drug": "Magnesium Sulfate",
+          "starttime": "2140-01-23T20:00:00",
+          "stoptime": "2140-02-11 16:00:00",
+          "dose": "2",
+          "dose_unit": "gm",
+          "route": "IV"
+        }
+      ],
+      "risk_prediction": {
+        "model": "CNN-BiLSTM",
+        "status": "integration_pending",
+        "prediction": null,
+        "risk_score": null
+      }
+    },
+    {
+      "subject_id": 10003400,
+      "demographics": {
+        "gender": "F",
+        "anchor_age": 72,
+        "anchor_year_group": "2011 - 2013"
+      },
+      "admission": {
+        "hadm_id": 23559586,
+        "admission_type": "URGENT",
+        "admission_location": "TRANSFER FROM HOSPITAL",
+        "discharge_location": "DIED",
+        "insurance": "Medicare",
+        "marital_status": "MARRIED",
+        "race": "BLACK/AFRICAN AMERICAN",
+        "hospital_expire_flag": 1
+      },
+      "icu_stay": {
+        "stay_id": 38383343,
+        "hadm_id": 23559586,
+        "first_careunit": "Coronary Care Unit (CCU)",
+        "last_careunit": "Medical Intensive Care Unit (MICU)",
+        "intime": "2137-08-17T17:36:37",
+        "outtime": "2137-09-02T19:17:11",
+        "length_of_stay_days": 16.07
+      },
+      "current_vitals": {
+        "heart_rate": 147.0,
+        "spo2": 95.0,
+        "respiratory_rate": 22.0,
+        "bp_systolic": 50.0,
+        "bp_diastolic": 31.0,
+        "bp_mean": 35.0
+      },
+      "vitals_history": [
+        {
+          "timestamp": "2137-08-17T17:30:00",
+          "heart_rate": 104.0,
+          "spo2": null,
+          "respiratory_rate": 33.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2137-08-17T18:00:00",
+          "heart_rate": 98.0,
+          "spo2": null,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 105.0,
+          "bp_diastolic": 69.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2137-08-17T18:30:00",
+          "heart_rate": 106.0,
+          "spo2": 99.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": 89.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 69.0
+        },
+        {
+          "timestamp": "2137-08-17T19:00:00",
+          "heart_rate": 99.0,
+          "spo2": 100.0,
+          "respiratory_rate": 15.0,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 69.0,
+          "bp_mean": 74.0
+        },
+        {
+          "timestamp": "2137-08-17T20:00:00",
+          "heart_rate": 94.0,
+          "spo2": 100.0,
+          "respiratory_rate": 13.0,
+          "bp_systolic": 92.0,
+          "bp_diastolic": 54.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2137-08-17T21:00:00",
+          "heart_rate": 102.0,
+          "spo2": 100.0,
+          "respiratory_rate": 13.0,
+          "bp_systolic": 95.0,
+          "bp_diastolic": 65.0,
+          "bp_mean": 71.0
+        },
+        {
+          "timestamp": "2137-08-17T22:00:00",
+          "heart_rate": 102.0,
+          "spo2": 100.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": 57.0,
+          "bp_diastolic": 34.0,
+          "bp_mean": 39.0
+        },
+        {
+          "timestamp": "2137-08-17T22:30:00",
+          "heart_rate": null,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 111.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2137-08-17T23:00:00",
+          "heart_rate": 109.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 114.0,
+          "bp_diastolic": 78.0,
+          "bp_mean": 86.0
+        },
+        {
+          "timestamp": "2137-08-18T00:00:00",
+          "heart_rate": 113.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 109.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 73.0
+        },
+        {
+          "timestamp": "2137-08-18T01:00:00",
+          "heart_rate": 110.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 105.0,
+          "bp_diastolic": 74.0,
+          "bp_mean": 81.0
+        },
+        {
+          "timestamp": "2137-08-18T02:00:00",
+          "heart_rate": 113.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 118.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 75.0
+        },
+        {
+          "timestamp": "2137-08-18T03:00:00",
+          "heart_rate": 109.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 111.0,
+          "bp_diastolic": 57.0,
+          "bp_mean": 69.0
+        },
+        {
+          "timestamp": "2137-08-18T04:00:00",
+          "heart_rate": 106.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 115.0,
+          "bp_diastolic": 56.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2137-08-18T05:00:00",
+          "heart_rate": 108.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 102.0,
+          "bp_diastolic": 52.0,
+          "bp_mean": 63.0
+        },
+        {
+          "timestamp": "2137-08-18T06:00:00",
+          "heart_rate": 107.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 105.0,
+          "bp_diastolic": 56.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2137-08-18T07:00:00",
+          "heart_rate": 126.0,
+          "spo2": 99.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 72.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2137-08-18T08:00:00",
+          "heart_rate": 119.0,
+          "spo2": null,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 99.0,
+          "bp_diastolic": 54.0,
+          "bp_mean": 65.0
+        },
+        {
+          "timestamp": "2137-08-18T09:00:00",
+          "heart_rate": 118.0,
+          "spo2": 87.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 131.0,
+          "bp_diastolic": 88.0,
+          "bp_mean": 99.0
+        },
+        {
+          "timestamp": "2137-08-18T10:00:00",
+          "heart_rate": 142.0,
+          "spo2": 98.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 83.0,
+          "bp_diastolic": 55.0,
+          "bp_mean": 62.0
+        },
+        {
+          "timestamp": "2137-08-18T11:00:00",
+          "heart_rate": 135.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 114.0,
+          "bp_diastolic": 95.0,
+          "bp_mean": 100.0
+        },
+        {
+          "timestamp": "2137-08-18T12:00:00",
+          "heart_rate": 125.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 97.0,
+          "bp_diastolic": 61.0,
+          "bp_mean": 71.0
+        },
+        {
+          "timestamp": "2137-08-18T13:00:00",
+          "heart_rate": 120.0,
+          "spo2": null,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 118.0,
+          "bp_diastolic": 89.0,
+          "bp_mean": 96.0
+        },
+        {
+          "timestamp": "2137-08-18T14:00:00",
+          "heart_rate": 118.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 98.0,
+          "bp_diastolic": 55.0,
+          "bp_mean": 65.0
+        },
+        {
+          "timestamp": "2137-08-18T15:00:00",
+          "heart_rate": 133.0,
+          "spo2": 99.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 116.0,
+          "bp_diastolic": 66.0,
+          "bp_mean": 77.0
+        },
+        {
+          "timestamp": "2137-08-18T16:00:00",
+          "heart_rate": 155.0,
+          "spo2": 100.0,
+          "respiratory_rate": 26.0,
+          "bp_systolic": 55.0,
+          "bp_diastolic": 36.0,
+          "bp_mean": 42.0
+        },
+        {
+          "timestamp": "2137-08-18T17:00:00",
+          "heart_rate": 117.0,
+          "spo2": 100.0,
+          "respiratory_rate": 33.0,
+          "bp_systolic": 103.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 72.0
+        },
+        {
+          "timestamp": "2137-08-18T18:00:00",
+          "heart_rate": 125.0,
+          "spo2": null,
+          "respiratory_rate": 12.0,
+          "bp_systolic": 101.0,
+          "bp_diastolic": 63.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2137-08-18T19:00:00",
+          "heart_rate": 115.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 99.0,
+          "bp_diastolic": 85.0,
+          "bp_mean": 88.0
+        },
+        {
+          "timestamp": "2137-08-18T20:00:00",
+          "heart_rate": 117.0,
+          "spo2": 98.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 111.0,
+          "bp_diastolic": 85.0,
+          "bp_mean": 91.0
+        },
+        {
+          "timestamp": "2137-08-18T21:00:00",
+          "heart_rate": 160.0,
+          "spo2": null,
+          "respiratory_rate": null,
+          "bp_systolic": 77.0,
+          "bp_diastolic": 46.0,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2137-08-18T21:30:00",
+          "heart_rate": null,
+          "spo2": 100.0,
+          "respiratory_rate": null,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2137-08-18T22:00:00",
+          "heart_rate": 137.0,
+          "spo2": 98.0,
+          "respiratory_rate": 21.0,
+          "bp_systolic": 114.0,
+          "bp_diastolic": 56.0,
+          "bp_mean": 71.0
+        },
+        {
+          "timestamp": "2137-08-18T23:00:00",
+          "heart_rate": 115.0,
+          "spo2": 98.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": 86.0,
+          "bp_diastolic": 61.0,
+          "bp_mean": 68.0
+        },
+        {
+          "timestamp": "2137-09-02T15:00:00",
+          "heart_rate": 144.0,
+          "spo2": 97.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 58.0,
+          "bp_diastolic": 36.0,
+          "bp_mean": 41.0
+        },
+        {
+          "timestamp": "2137-09-02T16:00:00",
+          "heart_rate": 147.0,
+          "spo2": 95.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 50.0,
+          "bp_diastolic": 31.0,
+          "bp_mean": 35.0
+        }
+      ],
+      "laboratory_results": [
+        {
+          "timestamp": "2137-08-28T04:08:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 1.4,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-28T04:08:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 86.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-28T04:08:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 3.3,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-28T04:08:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 138.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-29T03:59:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 1.4,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-29T03:59:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 82.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-29T03:59:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 3.8,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-29T03:59:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 140.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-29T17:56:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 6.6,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-29T17:56:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 50.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-29T17:56:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 5.7,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-30T00:15:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 7.5,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-30T00:15:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 51.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-30T00:15:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 6.2,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 1.3,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 88.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 3.7,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 140.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 8.0,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 52.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-30T03:31:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 6.4,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 1.3,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 78.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 4.2,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 142.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 7.9,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 58.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-08-31T04:02:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 5.8,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 1.2,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 78.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 3.9,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 142.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 7.9,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 61.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-09-01T03:26:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 6.7,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        }
+      ],
+      "diagnoses": [
+        {
+          "icd_code": "T8131XA",
+          "icd_version": 10,
+          "description": "Disruption of external operation (surgical) wound, not elsewhere classified, initial encounter"
+        },
+        {
+          "icd_code": "R6521",
+          "icd_version": 10,
+          "description": "Severe sepsis with septic shock"
+        },
+        {
+          "icd_code": "J9601",
+          "icd_version": 10,
+          "description": "Acute respiratory failure with hypoxia"
+        },
+        {
+          "icd_code": "N179",
+          "icd_version": 10,
+          "description": "Acute kidney failure, unspecified"
+        },
+        {
+          "icd_code": "A419",
+          "icd_version": 10,
+          "description": "Sepsis, unspecified organism"
+        },
+        {
+          "icd_code": "G9340",
+          "icd_version": 10,
+          "description": "Encephalopathy, unspecified"
+        },
+        {
+          "icd_code": "C9000",
+          "icd_version": 10,
+          "description": "Multiple myeloma not having achieved remission"
+        },
+        {
+          "icd_code": "J910",
+          "icd_version": 10,
+          "description": "Malignant pleural effusion"
+        }
+      ],
+      "medications": [
+        {
+          "drug": "Docusate Sodium",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-08-12 20:00:00",
+          "dose": "100",
+          "dose_unit": "mg",
+          "route": "PO"
+        },
+        {
+          "drug": "TraMADOL (Ultram)",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-08-05 09:00:00",
+          "dose": "25",
+          "dose_unit": "mg",
+          "route": "PO"
+        },
+        {
+          "drug": "Influenza Vaccine Quadrivalent",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-09-02 23:00:00",
+          "dose": "0.5",
+          "dose_unit": "mL",
+          "route": "IM"
+        },
+        {
+          "drug": "Sodium Chloride 0.9%  Flush",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-08-20 18:00:00",
+          "dose": "3",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "Calcium Carbonate",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-08-20 12:00:00",
+          "dose": "500",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Senna",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-08-20 18:00:00",
+          "dose": "17.2",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Vitamin D",
+          "starttime": "2137-08-05T02:00:00",
+          "stoptime": "2137-08-20 12:00:00",
+          "dose": "800",
+          "dose_unit": "UNIT",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Acetaminophen",
+          "starttime": "2137-08-05T05:00:00",
+          "stoptime": "2137-08-13 19:00:00",
+          "dose": "650",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Mirtazapine",
+          "starttime": "2137-08-05T05:00:00",
+          "stoptime": "2137-08-10 21:00:00",
+          "dose": "7.5",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Heparin Flush (100 units/ml)",
+          "starttime": "2137-08-05T05:00:00",
+          "stoptime": "2137-09-01 13:00:00",
+          "dose": "5",
+          "dose_unit": "mL",
+          "route": "IV"
+        }
+      ],
+      "risk_prediction": {
+        "model": "CNN-BiLSTM",
+        "status": "integration_pending",
+        "prediction": null,
+        "risk_score": null
+      }
+    },
+    {
+      "subject_id": 10007818,
+      "demographics": {
+        "gender": "M",
+        "anchor_age": 69,
+        "anchor_year_group": "2014 - 2016"
+      },
+      "admission": {
+        "hadm_id": 22987108,
+        "admission_type": "DIRECT EMER.",
+        "admission_location": "PHYSICIAN REFERRAL",
+        "discharge_location": "DIED",
+        "insurance": "Medicare",
+        "marital_status": "MARRIED",
+        "race": "WHITE",
+        "hospital_expire_flag": 1
+      },
+      "icu_stay": {
+        "stay_id": 32359580,
+        "hadm_id": 22987108,
+        "first_careunit": "Medical Intensive Care Unit (MICU)",
+        "last_careunit": "Medical Intensive Care Unit (MICU)",
+        "intime": "2146-06-22T11:46:29",
+        "outtime": "2146-07-13T00:27:47",
+        "length_of_stay_days": 20.529
+      },
+      "current_vitals": {
+        "heart_rate": 89.0,
+        "spo2": 100.0,
+        "respiratory_rate": 20.0,
+        "bp_systolic": 100.0,
+        "bp_diastolic": 49.0,
+        "bp_mean": 62.0
+      },
+      "vitals_history": [
+        {
+          "timestamp": "2146-06-22T12:00:00",
+          "heart_rate": 108.0,
+          "spo2": 100.0,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 75.0,
+          "bp_diastolic": 52.0,
+          "bp_mean": 56.0
+        },
+        {
+          "timestamp": "2146-06-22T12:30:00",
+          "heart_rate": 105.0,
+          "spo2": 92.0,
+          "respiratory_rate": 28.0,
+          "bp_systolic": 94.0,
+          "bp_diastolic": 61.0,
+          "bp_mean": 70.0
+        },
+        {
+          "timestamp": "2146-06-22T13:00:00",
+          "heart_rate": 139.0,
+          "spo2": 100.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 54.0,
+          "bp_diastolic": 21.0,
+          "bp_mean": 28.0
+        },
+        {
+          "timestamp": "2146-06-22T13:30:00",
+          "heart_rate": 100.0,
+          "spo2": null,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 136.0,
+          "bp_diastolic": 77.0,
+          "bp_mean": 90.0
+        },
+        {
+          "timestamp": "2146-06-22T14:00:00",
+          "heart_rate": 94.0,
+          "spo2": 100.0,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 118.0,
+          "bp_diastolic": 70.0,
+          "bp_mean": 82.0
+        },
+        {
+          "timestamp": "2146-06-22T19:00:00",
+          "heart_rate": 81.0,
+          "spo2": 98.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 94.0,
+          "bp_diastolic": 59.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2146-06-22T20:00:00",
+          "heart_rate": 73.0,
+          "spo2": 98.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2146-07-12T17:00:00",
+          "heart_rate": 96.0,
+          "spo2": null,
+          "respiratory_rate": 30.0,
+          "bp_systolic": 120.0,
+          "bp_diastolic": 68.0,
+          "bp_mean": 79.0
+        },
+        {
+          "timestamp": "2146-07-12T18:00:00",
+          "heart_rate": 93.0,
+          "spo2": null,
+          "respiratory_rate": 24.0,
+          "bp_systolic": 110.0,
+          "bp_diastolic": 60.0,
+          "bp_mean": 73.0
+        },
+        {
+          "timestamp": "2146-07-12T19:00:00",
+          "heart_rate": 94.0,
+          "spo2": null,
+          "respiratory_rate": 22.0,
+          "bp_systolic": 102.0,
+          "bp_diastolic": 55.0,
+          "bp_mean": 67.0
+        },
+        {
+          "timestamp": "2146-07-12T20:00:00",
+          "heart_rate": 89.0,
+          "spo2": null,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 100.0,
+          "bp_diastolic": 49.0,
+          "bp_mean": 62.0
+        }
+      ],
+      "laboratory_results": [
+        {
+          "timestamp": "2146-07-08T03:55:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 9.3,
+          "unit": "g/dL",
+          "reference_low": 13.7,
+          "reference_high": 17.5,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 3.3,
+          "unit": "mg/dL",
+          "reference_low": 0.5,
+          "reference_high": 1.2,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 272.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 3.8,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 138.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 9.8,
+          "unit": "g/dL",
+          "reference_low": 13.7,
+          "reference_high": 17.5,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 81.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2146-07-09T01:28:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 14.5,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": "abnormal"
+        }
+      ],
+      "diagnoses": [
+        {
+          "icd_code": "K7469",
+          "icd_version": 10,
+          "description": "Other cirrhosis of liver"
+        },
+        {
+          "icd_code": "K767",
+          "icd_version": 10,
+          "description": "Hepatorenal syndrome"
+        },
+        {
+          "icd_code": "J9600",
+          "icd_version": 10,
+          "description": "Acute respiratory failure, unspecified whether with hypoxia or hypercapnia"
+        },
+        {
+          "icd_code": "A4151",
+          "icd_version": 10,
+          "description": "Sepsis due to Escherichia coli [E. coli]"
+        },
+        {
+          "icd_code": "N179",
+          "icd_version": 10,
+          "description": "Acute kidney failure, unspecified"
+        },
+        {
+          "icd_code": "K661",
+          "icd_version": 10,
+          "description": "Hemoperitoneum"
+        },
+        {
+          "icd_code": "R571",
+          "icd_version": 10,
+          "description": "Hypovolemic shock"
+        },
+        {
+          "icd_code": "R6521",
+          "icd_version": 10,
+          "description": "Severe sepsis with septic shock"
+        }
+      ],
+      "medications": [
+        {
+          "drug": "Influenza Vaccine Quadrivalent",
+          "starttime": "2146-06-10T17:00:00",
+          "stoptime": "2146-06-13 04:00:00",
+          "dose": "0.5",
+          "dose_unit": "mL",
+          "route": "IM"
+        },
+        {
+          "drug": "PNEUMOcoccal 23-valent polysaccharide vaccine",
+          "starttime": "2146-06-10T17:00:00",
+          "stoptime": "2146-06-13 04:00:00",
+          "dose": "0.5",
+          "dose_unit": "mL",
+          "route": "IM"
+        },
+        {
+          "drug": "Sodium Chloride 0.9%  Flush",
+          "starttime": "2146-06-10T17:00:00",
+          "stoptime": "2146-06-25 10:00:00",
+          "dose": "3",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "Glucose Gel",
+          "starttime": "2146-06-10T18:00:00",
+          "stoptime": "2146-07-12 17:00:00",
+          "dose": "15",
+          "dose_unit": "g",
+          "route": "PO"
+        },
+        {
+          "drug": "Dextrose 50%",
+          "starttime": "2146-06-10T18:00:00",
+          "stoptime": "2146-07-12 17:00:00",
+          "dose": "12.5",
+          "dose_unit": "gm",
+          "route": "IV"
+        },
+        {
+          "drug": "Glucagon",
+          "starttime": "2146-06-10T18:00:00",
+          "stoptime": "2146-07-12 17:00:00",
+          "dose": "1",
+          "dose_unit": "mg",
+          "route": "IM"
+        },
+        {
+          "drug": "Rifaximin",
+          "starttime": "2146-06-10T19:00:00",
+          "stoptime": "2146-07-12 16:00:00",
+          "dose": "550",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Methimazole",
+          "starttime": "2146-06-10T19:00:00",
+          "stoptime": "2146-07-12 16:00:00",
+          "dose": "15",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Insulin",
+          "starttime": "2146-06-10T19:00:00",
+          "stoptime": "2146-06-16 17:00:00",
+          "dose": "20",
+          "dose_unit": "UNIT",
+          "route": "SC"
+        },
+        {
+          "drug": "Multivitamins",
+          "starttime": "2146-06-10T19:00:00",
+          "stoptime": "2146-07-12 10:00:00",
+          "dose": "1",
+          "dose_unit": "TAB",
+          "route": "PO/NG"
+        }
+      ],
+      "risk_prediction": {
+        "model": "CNN-BiLSTM",
+        "status": "integration_pending",
+        "prediction": null,
+        "risk_score": null
+      }
+    },
+    {
+      "subject_id": 10005817,
+      "demographics": {
+        "gender": "M",
+        "anchor_age": 66,
+        "anchor_year_group": "2014 - 2016"
+      },
+      "admission": {
+        "hadm_id": 28661809,
+        "admission_type": "OBSERVATION ADMIT",
+        "admission_location": "TRANSFER FROM HOSPITAL",
+        "discharge_location": "DIED",
+        "insurance": "Medicare",
+        "marital_status": "MARRIED",
+        "race": "WHITE",
+        "hospital_expire_flag": 1
+      },
+      "icu_stay": {
+        "stay_id": 31316840,
+        "hadm_id": 28661809,
+        "first_careunit": "Medical Intensive Care Unit (MICU)",
+        "last_careunit": "Medical/Surgical Intensive Care Unit (MICU/SICU)",
+        "intime": "2135-01-03T21:55:32",
+        "outtime": "2135-01-19T21:16:23",
+        "length_of_stay_days": 15.973
+      },
+      "current_vitals": {
+        "heart_rate": 86.0,
+        "spo2": 98.0,
+        "respiratory_rate": 10.0,
+        "bp_systolic": 85.0,
+        "bp_diastolic": 46.0,
+        "bp_mean": 54.0
+      },
+      "vitals_history": [
+        {
+          "timestamp": "2135-01-03T21:30:00",
+          "heart_rate": 74.0,
+          "spo2": 95.0,
+          "respiratory_rate": 19.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2135-01-03T22:00:00",
+          "heart_rate": 74.0,
+          "spo2": 93.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 127.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 84.0
+        },
+        {
+          "timestamp": "2135-01-03T23:00:00",
+          "heart_rate": 72.0,
+          "spo2": 96.0,
+          "respiratory_rate": 18.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2135-01-19T17:00:00",
+          "heart_rate": 121.0,
+          "spo2": null,
+          "respiratory_rate": 13.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        },
+        {
+          "timestamp": "2135-01-19T18:00:00",
+          "heart_rate": 86.0,
+          "spo2": null,
+          "respiratory_rate": 10.0,
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_mean": null
+        }
+      ],
+      "laboratory_results": [
+        {
+          "timestamp": "2135-01-17T13:17:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 8.1,
+          "unit": "g/dL",
+          "reference_low": 13.7,
+          "reference_high": 17.5,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2135-01-17T13:17:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 133.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2135-01-17T13:17:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 9.0,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2135-01-18T01:20:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 3.0,
+          "unit": "mg/dL",
+          "reference_low": 0.5,
+          "reference_high": 1.2,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2135-01-18T01:20:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 148.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2135-01-18T01:20:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 4.3,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2135-01-18T01:20:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 130.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": "abnormal"
+        }
+      ],
+      "diagnoses": [
+        {
+          "icd_code": "J9621",
+          "icd_version": 10,
+          "description": "Acute and chronic respiratory failure with hypoxia"
+        },
+        {
+          "icd_code": "J910",
+          "icd_version": 10,
+          "description": "Malignant pleural effusion"
+        },
+        {
+          "icd_code": "J189",
+          "icd_version": 10,
+          "description": "Pneumonia, unspecified organism"
+        },
+        {
+          "icd_code": "N170",
+          "icd_version": 10,
+          "description": "Acute kidney failure with tubular necrosis"
+        },
+        {
+          "icd_code": "E883",
+          "icd_version": 10,
+          "description": "Tumor lysis syndrome"
+        },
+        {
+          "icd_code": "I82412",
+          "icd_version": 10,
+          "description": "Acute embolism and thrombosis of left femoral vein"
+        },
+        {
+          "icd_code": "C7B8",
+          "icd_version": 10,
+          "description": "Other secondary neuroendocrine tumors"
+        },
+        {
+          "icd_code": "I5022",
+          "icd_version": 10,
+          "description": "Chronic systolic (congestive) heart failure"
+        }
+      ],
+      "medications": [
+        {
+          "drug": "Heparin",
+          "starttime": "2135-01-03T23:00:00",
+          "stoptime": "2135-01-09 15:00:00",
+          "dose": "5000",
+          "dose_unit": "UNIT",
+          "route": "SC"
+        },
+        {
+          "drug": "Sodium Chloride 0.9%  Flush",
+          "starttime": "2135-01-03T23:00:00",
+          "stoptime": "2135-01-10 13:00:00",
+          "dose": "3",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "QUEtiapine Fumarate",
+          "starttime": "2135-01-04T01:00:00",
+          "stoptime": "2135-01-04 01:00:00",
+          "dose": "50",
+          "dose_unit": "mg",
+          "route": "PO/NG"
+        },
+        {
+          "drug": "Magnesium Sulfate",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-19 14:00:00",
+          "dose": "2",
+          "dose_unit": "gm",
+          "route": "IV"
+        },
+        {
+          "drug": "Glucagon",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-19 14:00:00",
+          "dose": "1",
+          "dose_unit": "mg",
+          "route": "IM"
+        },
+        {
+          "drug": "Dextrose 50%",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-19 14:00:00",
+          "dose": "12.5",
+          "dose_unit": "gm",
+          "route": "IV"
+        },
+        {
+          "drug": "Bag",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-19 14:00:00",
+          "dose": "1",
+          "dose_unit": "BAG",
+          "route": "IV"
+        },
+        {
+          "drug": "Insulin",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-05 18:00:00",
+          "dose": "0",
+          "dose_unit": "UNIT",
+          "route": "SC"
+        },
+        {
+          "drug": "D5 1/2NS",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-04 23:00:00",
+          "dose": "1000",
+          "dose_unit": "mL",
+          "route": "IV"
+        },
+        {
+          "drug": "Glucose Gel",
+          "starttime": "2135-01-04T02:00:00",
+          "stoptime": "2135-01-19 14:00:00",
+          "dose": "15",
+          "dose_unit": "g",
+          "route": "PO"
+        }
+      ],
+      "risk_prediction": {
+        "model": "CNN-BiLSTM",
+        "status": "integration_pending",
+        "prediction": null,
+        "risk_score": null
+      }
+    },
+    {
+      "subject_id": 10003400,
+      "demographics": {
+        "gender": "F",
+        "anchor_age": 72,
+        "anchor_year_group": "2011 - 2013"
+      },
+      "admission": {
+        "hadm_id": 20214994,
+        "admission_type": "URGENT",
+        "admission_location": "TRANSFER FROM SKILLED NURSING FACILITY",
+        "discharge_location": "CHRONIC/LONG TERM ACUTE CARE",
+        "insurance": "Medicare",
+        "marital_status": "MARRIED",
+        "race": "BLACK/AFRICAN AMERICAN",
+        "hospital_expire_flag": 0
+      },
+      "icu_stay": {
+        "stay_id": 32128372,
+        "hadm_id": 20214994,
+        "first_careunit": "Medical/Surgical Intensive Care Unit (MICU/SICU)",
+        "last_careunit": "Medical/Surgical Intensive Care Unit (MICU/SICU)",
+        "intime": "2137-02-25T23:37:19",
+        "outtime": "2137-03-10T21:29:36",
+        "length_of_stay_days": 12.911
+      },
+      "current_vitals": {
+        "heart_rate": 116.0,
+        "spo2": 96.0,
+        "respiratory_rate": 23.0,
+        "bp_systolic": 106.0,
+        "bp_diastolic": 64.0,
+        "bp_mean": 72.0
+      },
+      "vitals_history": [
+        {
+          "timestamp": "2137-02-26T00:00:00",
+          "heart_rate": 114.0,
+          "spo2": 96.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 108.0,
+          "bp_diastolic": 68.0,
+          "bp_mean": 78.0
+        },
+        {
+          "timestamp": "2137-02-26T01:00:00",
+          "heart_rate": 115.0,
+          "spo2": 96.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 127.0,
+          "bp_diastolic": 76.0,
+          "bp_mean": 87.0
+        },
+        {
+          "timestamp": "2137-02-26T02:00:00",
+          "heart_rate": 112.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 118.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 82.0
+        },
+        {
+          "timestamp": "2137-02-26T03:00:00",
+          "heart_rate": 110.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 119.0,
+          "bp_diastolic": 76.0,
+          "bp_mean": 86.0
+        },
+        {
+          "timestamp": "2137-02-26T04:00:00",
+          "heart_rate": 114.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 120.0,
+          "bp_diastolic": 75.0,
+          "bp_mean": 85.0
+        },
+        {
+          "timestamp": "2137-02-26T05:00:00",
+          "heart_rate": 111.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 128.0,
+          "bp_diastolic": 80.0,
+          "bp_mean": 90.0
+        },
+        {
+          "timestamp": "2137-02-26T06:00:00",
+          "heart_rate": 114.0,
+          "spo2": 96.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 125.0,
+          "bp_diastolic": 80.0,
+          "bp_mean": 90.0
+        },
+        {
+          "timestamp": "2137-02-26T07:00:00",
+          "heart_rate": 113.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 127.0,
+          "bp_diastolic": 75.0,
+          "bp_mean": 87.0
+        },
+        {
+          "timestamp": "2137-02-26T08:00:00",
+          "heart_rate": 112.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 117.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 82.0
+        },
+        {
+          "timestamp": "2137-02-26T09:00:00",
+          "heart_rate": 113.0,
+          "spo2": 94.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 116.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 81.0
+        },
+        {
+          "timestamp": "2137-02-26T10:00:00",
+          "heart_rate": 114.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 118.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 82.0
+        },
+        {
+          "timestamp": "2137-02-26T11:00:00",
+          "heart_rate": 113.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 119.0,
+          "bp_diastolic": 70.0,
+          "bp_mean": 82.0
+        },
+        {
+          "timestamp": "2137-02-26T12:00:00",
+          "heart_rate": 115.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 121.0,
+          "bp_diastolic": 75.0,
+          "bp_mean": 85.0
+        },
+        {
+          "timestamp": "2137-02-26T13:00:00",
+          "heart_rate": 114.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 120.0,
+          "bp_diastolic": 74.0,
+          "bp_mean": 84.0
+        },
+        {
+          "timestamp": "2137-02-26T14:00:00",
+          "heart_rate": 112.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 116.0,
+          "bp_diastolic": 70.0,
+          "bp_mean": 80.0
+        },
+        {
+          "timestamp": "2137-02-26T15:00:00",
+          "heart_rate": 113.0,
+          "spo2": 95.0,
+          "respiratory_rate": 20.0,
+          "bp_systolic": 119.0,
+          "bp_diastolic": 71.0,
+          "bp_mean": 82.0
+        },
+        {
+          "timestamp": "2137-02-26T16:00:00",
+          "heart_rate": 116.0,
+          "spo2": 96.0,
+          "respiratory_rate": 23.0,
+          "bp_systolic": 106.0,
+          "bp_diastolic": 64.0,
+          "bp_mean": 72.0
+        }
+      ],
+      "laboratory_results": [
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "creatinine",
+          "label": "Creatinine",
+          "value": 1.2,
+          "unit": "mg/dL",
+          "reference_low": 0.4,
+          "reference_high": 1.1,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "glucose",
+          "label": "Glucose",
+          "value": 90.0,
+          "unit": "mg/dL",
+          "reference_low": 70.0,
+          "reference_high": 100.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "potassium",
+          "label": "Potassium",
+          "value": 4.1,
+          "unit": "mEq/L",
+          "reference_low": 3.3,
+          "reference_high": 5.1,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "sodium",
+          "label": "Sodium",
+          "value": 139.0,
+          "unit": "mEq/L",
+          "reference_low": 133.0,
+          "reference_high": 145.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "hemoglobin",
+          "label": "Hemoglobin",
+          "value": 8.5,
+          "unit": "g/dL",
+          "reference_low": 11.2,
+          "reference_high": 15.7,
+          "flag": "abnormal"
+        },
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "platelets",
+          "label": "Platelet Count",
+          "value": 182.0,
+          "unit": "K/uL",
+          "reference_low": 150.0,
+          "reference_high": 400.0,
+          "flag": null
+        },
+        {
+          "timestamp": "2137-03-09T03:30:00",
+          "test": "wbc",
+          "label": "White Blood Cells",
+          "value": 7.4,
+          "unit": "K/uL",
+          "reference_low": 4.0,
+          "reference_high": 10.0,
+          "flag": null
+        }
+      ],
+      "diagnoses": [
+        {
+          "icd_code": "I5021",
+          "icd_version": 10,
+          "description": "Acute systolic (congestive) heart failure"
+        },
+        {
+          "icd_code": "J9601",
+          "icd_version": 10,
+          "description": "Acute respiratory failure with hypoxia"
+        },
+        {
+          "icd_code": "N179",
+          "icd_version": 10,
+          "description": "Acute kidney failure, unspecified"
+        },
+        {
+          "icd_code": "A419",
+          "icd_version": 10,
+          "description": "Sepsis, unspecified organism"
+        },
+        {
+          "icd_code": "E119",
+          "icd_version": 10,
+          "description": "Type 2 diabetes mellitus without complications"
+        }
+      ],
+      "medications": [
+        {
+          "drug": "Furosemide",
+          "starttime": "2137-02-25T23:45:00",
+          "stoptime": "2137-03-10 12:00:00",
+          "dose": "40",
+          "dose_unit": "mg",
+          "route": "IV"
+        },
+        {
+          "drug": "Metoprolol Tartrate",
+          "starttime": "2137-02-26T08:00:00",
+          "stoptime": "2137-03-10 20:00:00",
+          "dose": "25",
+          "dose_unit": "mg",
+          "route": "PO"
+        },
+        {
+          "drug": "Lisinopril",
+          "starttime": "2137-02-26T08:00:00",
+          "stoptime": "2137-03-10 20:00:00",
+          "dose": "10",
+          "dose_unit": "mg",
+          "route": "PO"
+        },
+        {
+          "drug": "Insulin Glargine",
+          "starttime": "2137-02-26T21:00:00",
+          "stoptime": "2137-03-10 21:00:00",
+          "dose": "15",
+          "dose_unit": "UNIT",
+          "route": "SC"
+        }
+      ],
+      "risk_prediction": {
+        "model": "CNN-BiLSTM",
+        "status": "integration_pending",
+        "prediction": null,
+        "risk_score": null
+      }
+    }
+  ]
+}
